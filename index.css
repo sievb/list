@@ -1,0 +1,18 @@
+html {
+  padding: 2.5%;
+  font-size: 18px;
+}
+
+input {
+  width: 100%;
+  padding: 5%;
+}
+
+#addBtn {
+  height: 100%;
+  width: 50%;
+}
+
+.container {
+  margin-bottom: 2.5rem;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap-table.min.css" />
+    <script src="jquery-3.5.1.slim.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <label for="location">Location</label>
+          <input
+            id="location"
+            type="text"
+            name="location"
+            placeholder="Location"
+            autofocus
+          />
+        </div>
+
+        <div class="col-sm">
+          <label for="item">Item</label>
+          <input id="item" type="text" name="item" placeholder="Item Name" />
+        </div>
+
+        <div class="col-sm">
+          <label for="quantity">Quantity</label>
+          <input
+            id="quantity"
+            type="number"
+            name="quantity"
+            placeholder="Number of Items"
+          />
+        </div>
+
+        <div class="col-sm">
+          <button id="addBtn" type="submit" class="btn btn-success">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="toolbar">
+      <button id="removeBtn" class="btn btn-danger">
+        Remove Selected Rows
+      </button>
+
+      <button id="clearBtn" class="btn btn-secondary">Clear List</button>
+    </div>
+
+    <table
+      id="itemList"
+      class="table table-sm table-striped"
+      data-toggle="table"
+      data-toolbar="#toolbar"
+      data-click-to-select="true"
+    >
+      <thead>
+        <tr>
+          <th data-checkbox="true"></th>
+          <th class="w-25" data-sortable="true" data-field="location">
+            Location
+          </th>
+          <th data-field="item">Item</th>
+          <th class="w-25" data-field="quantity">Quantity</th>
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+    </table>
+  </body>
+  <script src="bootstrap.min.js"></script>
+  <script src="bootstrap-table.min.js"></script>
+  <script src="app.js"></script>
+</html>

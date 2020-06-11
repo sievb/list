@@ -48,7 +48,7 @@ $("#addBtn").click(function () {
 
 function createRow() {
   let location = $("#location").val();
-  let item = $("#item").val();
+  let item = autoCapitalize($("#item").val());
   let quantity = $("#quantity").val();
   $table = $("#itemList");
 
@@ -85,3 +85,8 @@ $("#removeBtn").click(function () {
 $("#clearBtn").click(function () {
   $table.bootstrapTable("removeAll");
 });
+
+function autoCapitalize(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
